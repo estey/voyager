@@ -48,7 +48,7 @@ async function search () {
 // Function to display recommendations on the page
 function displayRecommendations(recommendations) {
     const recommendationsContainer = document.getElementById('recommendations'); // Ensure you have this element in your HTML
-    console.log(recommendations);
+    recommendationsContainer.innerHTML = '';
 
     recommendations.forEach(rec => {
         const recommendationDiv = document.createElement('div');
