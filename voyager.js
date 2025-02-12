@@ -8,28 +8,25 @@ async function fetchTravelRecommendations() {
             throw new Error('Network response was not ok ' + response.statusText);
         }
         const data = await response.json();
-        console.log(data); // Log the fetched data to the console
-
-        // Optionally, you can display the recommendations on the page
         return(data);
     } catch (error) {
         console.error('There has been a problem with your fetch operation:', error);
     }
 }
 
-function search () {
-    searchInput = document.getElementById("search-input").value.toLowerCase();
-    console.log(searchInput);
-    data = fetchTravelRecommendations();
-    if (searchInput == "beach") {
+async function search () {
+    const searchInput = document.getElementById("search-input").value.toLowerCase();
+    const data = await fetchTravelRecommendations();
+
+    if (searchInput === "beach") {
         console.log("searchInput");
-        //displayRecommendations(data.beaches);
+        displayRecommendations(data.beaches);
     }
-    if (searchInput == "temple") {
+    if (searchInput === "temple") {
         console.log(data.temples);
         //displayRecommendations(data.temples);
     }
-    if (searchInput == "country") {
+    if (searchInput === "country") {
         console.log(data.countries);
         //displayRecommendations(data.countries);
     }
@@ -38,6 +35,7 @@ function search () {
 // Function to display recommendations on the page
 function displayRecommendations(recommendations) {
     const recommendationsContainer = document.getElementById('recommendations'); // Ensure you have this element in your HTML
+    console.log(recommendations);
     recommendations.forEach(rec => {
         const recommendationDiv = document.createElement('div');
         recommendationDiv.classList.add('recommendation-card');
