@@ -54,7 +54,7 @@ body {
 }
 .hero {
     text-align: left;
-    padding: 200px 20px; /* Adjust padding as needed */
+    padding: 180px 20px; /* Adjust padding as needed */
     background-color: rgba(0, 0, 0, 0.1); /* Dark overlay for better text visibility */
 }
 .hero h1 {
@@ -130,11 +130,11 @@ button {
 }
 
 .recommendation-card {
-    background-color: white; /* Card background color */
+    background-color: rgb(216, 248, 219); /* Card background color */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
     margin: 15px; /* Space between cards */
-    width: 300px; /* Fixed width for cards */
+    width: 500px; /* Fixed width for cards */
     overflow: hidden; /* Prevent overflow */
     transition: transform 0.2s; /* Smooth hover effect */
 }
@@ -157,6 +157,7 @@ button {
     font-size: 20px; /* Title font size */
     font-weight: bold; /* Bold title */
     margin: 0; /* Remove default margin */
+    color: black;
 }
 
 .recommendation-description {

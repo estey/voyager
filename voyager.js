@@ -42,7 +42,7 @@ function displayRecommendations(recommendations) {
 
         recommendationDiv.innerHTML = `
             <img src="${rec.imageUrl}" alt="${rec.name}" class="recommendation-image">
-            <h2 class="recommendation-title>${rec.name}</h2>
+            <h2 class="recommendation-title">${rec.name}</h2>
             <p class="recommendation-description">${rec.description}</p>
         `;
         recommendationsContainer.appendChild(recommendationDiv);
