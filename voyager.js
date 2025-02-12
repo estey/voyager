@@ -24,11 +24,24 @@ async function search () {
     }
     if (searchInput === "temple") {
         console.log(data.temples);
-        //displayRecommendations(data.temples);
+        displayRecommendations(data.temples);
     }
     if (searchInput === "country") {
         console.log(data.countries);
-        //displayRecommendations(data.countries);
+        const cities = [];
+        data.countries.forEach(function(country){
+            country.cities.forEach(function(city) {
+                cities.push(city)
+            });
+        });
+        // Shuffle the array using Fisher-Yates (Knuth) shuffle algorithm
+        for (let i = cities.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [cities[i], cities[j]] = [cities[j], cities[i]]; // Swap elements
+        }
+
+        // Return the first 4 elements of the shuffled array
+        displayRecommendations(cities.slice(0,4));
     }
 }
 
@@ -36,6 +49,7 @@ async function search () {
 function displayRecommendations(recommendations) {
     const recommendationsContainer = document.getElementById('recommendations'); // Ensure you have this element in your HTML
     console.log(recommendations);
+
     recommendations.forEach(rec => {
         const recommendationDiv = document.createElement('div');
         recommendationDiv.classList.add('recommendation-card');
