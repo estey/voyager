@@ -122,3 +122,60 @@ button {
     border-radius: 5px;
     cursor: pointer;
 }
+.recommendations-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the cards */
+    padding: 20px;
+}
+
+.recommendation-card {
+    background-color: white; /* Card background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    margin: 15px; /* Space between cards */
+    width: 300px; /* Fixed width for cards */
+    overflow: hidden; /* Prevent overflow */
+    transition: transform 0.2s; /* Smooth hover effect */
+}
+
+.recommendation-card:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+.recommendation-image {
+    width: 100%; /* Full width */
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Cover the area without distortion */
+}
+
+.recommendation-content {
+    padding: 15px; /* Padding inside the card */
+}
+
+.recommendation-title {
+    font-size: 20px; /* Title font size */
+    font-weight: bold; /* Bold title */
+    margin: 0; /* Remove default margin */
+}
+
+.recommendation-description {
+    font-size: 14px; /* Description font size */
+    margin: 10px 0; /* Margin for spacing */
+    color: #555; /* Dark gray color for text */
+}
+
+.recommendation-button {
+    background-color: #4CAF50; /* Button color */
+    color: white; /* Button text color */
+    padding: 10px 15px; /* Button padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Display as inline block */
+}
+
+.recommendation-button:hover {
+    background-color: #45a049; /* Darker shade on hover */
+}
