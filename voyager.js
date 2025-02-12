@@ -1,4 +1,5 @@
 searchBtn = document.getElementById("search-btn");
+clearBtn = document.getElementById("clear-btn");
 
 // Function to fetch travel recommendations
 async function fetchTravelRecommendations() {
@@ -47,8 +48,8 @@ async function search () {
 
 // Function to display recommendations on the page
 function displayRecommendations(recommendations) {
+    clearRecommendations();
     const recommendationsContainer = document.getElementById('recommendations'); // Ensure you have this element in your HTML
-    recommendationsContainer.innerHTML = '';
 
     recommendations.forEach(rec => {
         const recommendationDiv = document.createElement('div');
@@ -63,6 +64,10 @@ function displayRecommendations(recommendations) {
     });
 }
 
-// Call the function to fetch recommendations
+function clearRecommendations () {
+    const recommendationsContainer = document.getElementById('recommendations'); // Ensure you have this element in your HTML
+    recommendationsContainer.innerHTML = '';
+}
 
 searchBtn.addEventListener("click", search);
+clearBtn.addEventListener("click", clearRecommendations);
