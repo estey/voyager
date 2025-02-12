@@ -100,3 +100,25 @@ body {
 .team-member p {
     margin: 5px 0;
 }
+form {
+    max-width: 600px; /* Limit form width */
+    margin: 0 auto; /* Center the form */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.2); /* Light overlay for form */
+    border-radius: 10px;
+}
+input[type="text"], input[type="email"], textarea {
+    width: 100%; /* Full width */
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+button {
+    background-color: #4CAF50; /* Button color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
